@@ -17,7 +17,7 @@ func TestWaitGroup1(t *testing.T) {
 	}
 	success := wg.WaitSuccess(time.Second * 5)
 	if success {
-		t.Errorf("TestWaitGroup wait: %t, got: %t", false, success)
+		t.Errorf("TestWaitGroup want: %t, got: %t", false, success)
 	}
 }
 func TestWaitGroup2(t *testing.T) {
@@ -32,6 +32,6 @@ func TestWaitGroup2(t *testing.T) {
 	}
 	success := wg.WaitSuccess(time.Second * 5)
 	if !success {
-		t.Errorf("TestWaitGroup wait: %t, got: %t", true, success)
+		t.Errorf("TestWaitGroup want: %t, got: %t", true, success)
 	}
 }
