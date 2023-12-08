@@ -1,4 +1,4 @@
-package wgroup
+package wait_group
 
 import (
 	"testing"
