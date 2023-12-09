@@ -1,4 +1,4 @@
-package wait_group
+package waitgroup
 
 import (
 	"sync"
