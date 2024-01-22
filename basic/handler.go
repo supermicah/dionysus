@@ -10,7 +10,7 @@ import (
 type DionysusBasicImpl struct{}
 
 // SayHello implements the DionysusBasicImpl interface.
-func (s *DionysusBasicImpl) SayHello(ctx context.Context, req *basic.SayHelloRequest) (resp *basic.SayHelloResponse, err error) {
+func (s *DionysusBasicImpl) SayHello(_ context.Context, _ *basic.SayHelloRequest) (resp *basic.SayHelloResponse, err error) {
 	// TODO: Your code here...
 	return
 }
