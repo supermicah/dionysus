@@ -24,10 +24,10 @@ require (
 	github.com/cloudwego/thriftgo v0.3.6 // indirect
 	github.com/davecgh/go-spew v1.1.2-0.20180830191138-d8f796af33cc // indirect
 	github.com/fatih/structtag v1.2.0 // indirect
-	github.com/golang/protobuf v1.5.2 // indirect
+	github.com/golang/protobuf v1.5.3 // indirect
 	github.com/google/pprof v0.0.0-20240117000934-35fc243c5815 // indirect
 	github.com/iancoleman/strcase v0.3.0 // indirect
-	github.com/jhump/protoreflect v1.8.2 // indirect
+	github.com/jhump/protoreflect v1.8.2 // indirect; indirect 不能升级 升级后异常
 	github.com/json-iterator/go v1.1.12 // indirect
 	github.com/klauspost/cpuid/v2 v2.2.6 // indirect
 	github.com/modern-go/concurrent v0.0.0-20180306012644-bacd9c7ef1dd // indirect
