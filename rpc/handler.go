@@ -2,6 +2,7 @@ package main
 
 import (
 	"context"
+
 	greet "github.com/supermicah/dionysus/rpc/kitex_gen/greet"
 )
 
@@ -9,7 +10,6 @@ import (
 type DionysusImpl struct{}
 
 // Greet implements the DionysusImpl interface.
-func (s *DionysusImpl) Greet(ctx context.Context, req *greet.GreetRequest) (resp *greet.GreetResponse, err error) {
-	// TODO: Your code here...
+func (s *DionysusImpl) Greet(_ context.Context, _ *greet.GreetRequest) (resp *greet.GreetResponse, err error) {
 	return
 }
