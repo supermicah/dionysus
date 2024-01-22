@@ -3,7 +3,7 @@ package main
 import (
 	"context"
 
-	basic "github.com/supermicah/dionysus/basic/kitex_gen/dionysus/basic"
+	"github.com/supermicah/dionysus/basic/kitex_gen/dionysus/basic"
 )
 
 // DionysusBasicImpl implements the last service interface defined in the IDL.
