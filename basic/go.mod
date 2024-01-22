@@ -14,8 +14,8 @@ require (
 	github.com/choleraehyq/pid v0.0.18 // indirect
 	github.com/cloudwego/dynamicgo v0.2.0 // indirect
 	github.com/cloudwego/frugal v0.1.13 // indirect
-	github.com/cloudwego/thriftgo v0.3.5 // indirect
-	github.com/google/pprof v0.0.0-20231229205709-960ae82b1e42 // indirect
+	github.com/cloudwego/thriftgo v0.3.6 // indirect
+	github.com/google/pprof v0.0.0-20240117000934-35fc243c5815 // indirect
 	github.com/iancoleman/strcase v0.3.0 // indirect
 	github.com/jhump/protoreflect v1.15.4 // indirect
 	github.com/klauspost/cpuid/v2 v2.2.6 // indirect
