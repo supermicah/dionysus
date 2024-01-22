@@ -12,7 +12,7 @@ import (
 
 // Greet .
 // @router greet [GET]
-func Greet(ctx context.Context, c *app.RequestContext) {
+func Greet(_ context.Context, c *app.RequestContext) {
 	var err error
 	var req greet.GreetRequest
 	err = c.BindAndValidate(&req)
