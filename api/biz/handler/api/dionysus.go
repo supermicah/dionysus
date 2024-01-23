@@ -7,12 +7,15 @@ import (
 
 	"github.com/cloudwego/hertz/pkg/app"
 	"github.com/cloudwego/hertz/pkg/protocol/consts"
-	greet "github.com/supermicah/dionysus/api/biz/model/greet"
+	"github.com/cloudwego/kitex/client"
+	"github.com/supermicah/dionysus/api/biz/model/greet"
+	greetrpc "github.com/supermicah/dionysus/rpc/kitex_gen/greet"
+	"github.com/supermicah/dionysus/rpc/kitex_gen/rpc/dionysus"
 )
 
 // Greet .
 // @router greet [GET]
-func Greet(_ context.Context, c *app.RequestContext) {
+func Greet(ctx context.Context, c *app.RequestContext) {
 	var err error
 	var req greet.GreetRequest
 	err = c.BindAndValidate(&req)
@@ -21,7 +24,20 @@ func Greet(_ context.Context, c *app.RequestContext) {
 		return
 	}
 
-	resp := new(greet.GreetResponse)
+	// Use kitex client to make rpc calls and request back-end services
+	cli, err := dionysus.NewClient("rpc", client.WithHostPorts("127.0.0.1:8888"))
+	if err != nil {
+		panic(err)
+	}
 
-	c.JSON(consts.StatusOK, resp)
+	respRpc, err := cli.Greet(ctx, &greetrpc.GreetRequest{
+		Greet:  "21",
+		Name:   "22",
+		Gender: "23",
+	})
+	if err != nil {
+		panic(err)
+	}
+
+	c.JSON(consts.StatusOK, respRpc)
 }

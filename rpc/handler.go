@@ -11,7 +11,9 @@ type DionysusImpl struct{}
 
 // Greet implements the DionysusImpl interface.
 func (s *DionysusImpl) Greet(_ context.Context, _ *greet.GreetRequest) (resp *greet.GreetResponse, err error) {
-	resp.Ok = true
-	resp.Msg = "success"
+	resp = &greet.GreetResponse{
+		Ok:  true,
+		Msg: "success",
+	}
 	return
 }

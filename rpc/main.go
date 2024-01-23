@@ -1,8 +1,9 @@
 package main
 
 import (
-	rpc "github.com/supermicah/dionysus/rpc/kitex_gen/rpc/dionysus"
 	"log"
+
+	rpc "github.com/supermicah/dionysus/rpc/kitex_gen/rpc/dionysus"
 )
 
 func main() {
