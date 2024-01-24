@@ -10,7 +10,7 @@ import (
 	"github.com/cloudwego/kitex/client"
 	"github.com/supermicah/dionysus/api/biz/model/greet"
 	greetrpc "github.com/supermicah/dionysus/rpc/kitex_gen/greet"
-	"github.com/supermicah/dionysus/rpc/kitex_gen/rpc/dionysus"
+	dionysusrpc "github.com/supermicah/dionysus/rpc/kitex_gen/rpc/dionysus"
 )
 
 // Greet .
@@ -25,7 +25,7 @@ func Greet(ctx context.Context, c *app.RequestContext) {
 	}
 
 	// Use kitex client to make rpc calls and request back-end services
-	cli, err := dionysus.NewClient("rpc", client.WithHostPorts("127.0.0.1:8888"))
+	cli, err := dionysusrpc.NewClient("rpc", client.WithHostPorts("127.0.0.1:8888"))
 	if err != nil {
 		panic(err)
 	}
